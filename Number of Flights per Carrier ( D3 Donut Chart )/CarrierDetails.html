@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flights per Carrier</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+   <!-- <script src="jquery-3.2.1.min.js"></script>-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <script src ="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    
+$(document).ready(function(){
+
+  //hides dropdown content
+  $(".chart").hide();
+  
+  //unhides first option content
+  $("#selectyear").show();
+  
+  //listen to dropdown for change
+  $("#year").change(function(){
+    //rehide content on change
+    $('.chart').hide();
+    //unhides current item
+    $('#'+$(this).val()).show();
+  });
+  
+});
+</script>
+
+<script> 
+var donut1998 = donutChart()
+       .width(960)
+        .height(500)
+        .cornerRadius(3) // sets how rounded the corners are on each slice
+        .padAngle(0.015) // effectively dictates the gap between slices
+        .variable('Totalflights')
+        .category('Airline');
+
+    d3.csv('carriers1998.csv', function(error, data) {
+        if (error) throw error;
+        d3.select('#chart1998')
+            .datum(data) // bind data to the div
+            .call(donut1998); // draw chart in div
+    });
+
+var donut1999 = donutChart()
+       .width(960)
+        .height(500)
+        .cornerRadius(3) // sets how rounded the corners are on each slice
+        .padAngle(0.015) // effectively dictates the gap between slices
+        .variable('Totalflights')
+        .category('Airline');
+
+    d3.csv('carriers1999.csv', function(error, data) {
+        if (error) throw error;
+        d3.select('#chart1999')
+            .datum(data) // bind data to the div
+            .call(donut1999); // draw chart in div
+    });
+
+var donut2000 = donutChart()
+       .width(960)
+        .height(500)
+        .cornerRadius(3) // sets how rounded the corners are on each slice
+        .padAngle(0.015) // effectively dictates the gap between slices
+        .variable('Totalflights')
+        .category('Airline');
+
+    d3.csv('carriers2000.csv', function(error, data) {
+        if (error) throw error;
+        d3.select('#chart2000')
+            .datum(data) // bind data to the div
+            .call(donut2000); // draw chart in div
+    });
+
+var donut2001 = donutChart()
+       .width(960)
+        .height(500)
+        .cornerRadius(3) // sets how rounded the corners are on each slice
+        .padAngle(0.015) // effectively dictates the gap between slices
+        .variable('Totalflights')
+        .category('Airline');
+
+    d3.csv('carriers2001.csv', function(error, data) {
+        if (error) throw error;
+        d3.select('#chart2001')
+            .datum(data) // bind data to the div
+            .call(donut2001); // draw chart in div
+    });
+
+var donut2002 = donutChart()
+       .width(960)
+        .height(500)
+        .cornerRadius(3) // sets how rounded the corners are on each slice
+        .padAngle(0.015) // effectively dictates the gap between slices
+        .variable('Totalflights')
+        .category('Airline');
+
+    d3.csv('carriers2002.csv', function(error, data) {
+        if (error) throw error;
+        d3.select('#chart2002')
+            .datum(data) // bind data to the div
+            .call(donut2002); // draw chart in div
+    });
+
+var donut2003 = donutChart()
+       .width(960)
+        .height(500)
+        .cornerRadius(3) // sets how rounded the corners are on each slice
+        .padAngle(0.015) // effectively dictates the gap between slices
+        .variable('Totalflights')
+        .category('Airline');
+
+    d3.csv('carriers2003.csv', function(error, data) {
+        if (error) throw error;
+        d3.select('#chart2003')
+            .datum(data) // bind data to the div
+            .call(donut2003); // draw chart in div
+    });
+
+var donut2004 = donutChart()
+       .width(960)
+        .height(500)
+        .cornerRadius(3) // sets how rounded the corners are on each slice
+        .padAngle(0.015) // effectively dictates the gap between slices
+        .variable('Totalflights')
+        .category('Airline');
+
+    d3.csv('carriers2004.csv', function(error, data) {
+        if (error) throw error;
+        d3.select('#chart2004')
+            .datum(data) // bind data to the div
+            .call(donut2004); // draw chart in div
+    });
+
+var donut2005 = donutChart()
+       .width(960)
+        .height(500)
+        .cornerRadius(3) // sets how rounded the corners are on each slice
+        .padAngle(0.015) // effectively dictates the gap between slices
+        .variable('Totalflights')
+        .category('Airline');
+
+    d3.csv('carriers2005.csv', function(error, data) {
+        if (error) throw error;
+        d3.select('#chart2005')
+            .datum(data) // bind data to the div
+            .call(donut2005); // draw chart in div
+    });
+
+ var donut2006 = donutChart()
+       .width(960)
+        .height(500)
+        .cornerRadius(3) // sets how rounded the corners are on each slice
+        .padAngle(0.015) // effectively dictates the gap between slices
+        .variable('Totalflights')
+        .category('Airline');
+
+    d3.csv('carriers2006.csv', function(error, data) {
+        if (error) throw error;
+        d3.select('#chart2006')
+            .datum(data) // bind data to the div
+            .call(donut2006); // draw chart in div
+    });
+
+
+ var donut2007 = donutChart()
+       .width(960)
+        .height(500)
+        .cornerRadius(3) // sets how rounded the corners are on each slice
+        .padAngle(0.015) // effectively dictates the gap between slices
+        .variable('Totalflights')
+        .category('Airline');
+
+    d3.csv('carriers2007.csv', function(error, data) {
+        if (error) throw error;
+        d3.select('#chart2007')
+            .datum(data) // bind data to the div
+            .call(donut2007); // draw chart in div
+    });
+
+     var donut2008 = donutChart()
+       .width(960)
+        .height(500)
+        .cornerRadius(3) // sets how rounded the corners are on each slice
+        .padAngle(0.015) // effectively dictates the gap between slices
+        .variable('Totalflights')
+        .category('Airline');
+
+    d3.csv('carriers2008.csv', function(error, data) {
+        if (error) throw error;
+        d3.select('#chart2008')
+            .datum(data) // bind data to the div
+            .call(donut2008); // draw chart in div
+    });
+
+
+    
+
+</script> 
+
+</head>
+<body>
+
+<h1><center>Number of flights per Carrier</center></h1>
+
+<center><select id="year"></center>
+  <option value="selectyear">Select Year</option>
+  <option value="2008">2008</option>
+  <option value="2007">2007</option>
+  <option value="2006">2006</option>
+  <option value="2005">2005</option>
+  <option value="2004">2004</option>
+  <option value="2003">2003</option>
+  <option value="2002">2002</option>
+  <option value="2001">2001</option>
+  <option value="2000">2000</option>
+  <option value="1999">1999</option>
+  <option value="1998">1998</option>
+</select>
+
+<br><br>
+
+<div id="2008" class="chart">
+    <div id="chart2008"></div>
+</div>
+<div id="2007" class="chart">
+<div id="chart2007"></div> 
+</div>
+<div id="2006" class="chart"> 
+    <div id="chart2006"></div>
+</div>
+<div id="2005" class="chart"> 
+    <div id="chart2005"></div>
+</div>
+<div id="2004" class="chart"> 
+    <div id="chart2004"></div>
+</div>
+<div id="2003" class="chart">
+    <div id="chart2003"></div>
+</div>
+<div id="2002" class="chart">
+    <div id="chart2002"></div>
+</div>
+<div id="2001" class="chart">
+    <div id="chart2001"></div>
+</div>
+<div id="2000" class="chart">
+    <div id="chart2000"></div>
+</div>
+<div id="1999" class="chart">
+    <div id="chart1999"></div>
+</div>
+<div id="1998" class="chart">
+    <div id="chart1998"></div>
+</div>
+
+
+
+</body>
+
+
+</html>
